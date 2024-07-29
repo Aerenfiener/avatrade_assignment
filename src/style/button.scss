@@ -1,0 +1,56 @@
+@import 'variables';
+
+.button {
+  button {
+    color: white;
+    width: 240px;
+    border-radius: 25px;
+    padding: 13.5px 37px;
+    background: $primary-color;
+    font-family: $font;
+    font-size: 18px;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background: $primary-color-strong
+    }
+
+    &:disabled {
+      background-color: $primary-color-weak;
+      cursor: default;
+
+      &:hover {
+        background: $primary-color-weak;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__loader-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.button-invisible {
+  button {
+    background: transparent;
+    padding: 0;
+    border: 0;
+  }
+}

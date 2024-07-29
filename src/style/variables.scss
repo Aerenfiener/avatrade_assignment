@@ -1,0 +1,45 @@
+$primary-color-weak: #1187F459;
+$primary-color: #1187F4;
+$primary-color-strong: #0c68be;
+
+$gray-weak: #CCCCCC;
+$gray-muted: #A5A5A5;
+$gray-base: #343434;
+$gray-strong: #484649;
+
+$background-strong: #E5F3FF;
+$background-color: #f5f5f5;
+$background-trace: white;
+
+$error-color: #ff5c5c;
+$success-color: green;
+$text-color: #333;
+
+$font: 'Mulish', sans-serif;
+
+$text-strong: $gray-strong;
+$text-base: $gray-base;
+$text-muted: $gray-muted;
+
+$breakpoint-xs: 480px;   // phones
+$breakpoint-sm: 576px;   // landscape phones
+$breakpoint-md: 768px;   // tablets
+$breakpoint-lg: 992px;   // desktops
+$breakpoint-xl: 1200px;  // large desktops
+$breakpoint-xxl: 1400px; // larger desktops
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: $breakpoint-xs) { @content; }
+  } @else if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: $breakpoint-xl) { @content; }
+  } @else if $breakpoint == xxl {
+    @media (max-width: $breakpoint-xxl) { @content; }
+  }
+}
